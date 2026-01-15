@@ -1,0 +1,193 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Emmanuel Ndemele — Health Tech Product Manager</title>
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700&display=swap" rel="stylesheet">
+  <style>
+    :root {
+      --accent: #0f766e;
+      --text: #0f172a;
+      --muted: #475569;
+      --bg: #ffffff;
+    }
+    body {
+      margin: 0;
+      font-family: Inter, system-ui, sans-serif;
+      color: var(--text);
+      background: var(--bg);
+      line-height: 1.6;
+      scroll-behavior: smooth;
+    }
+    .container {
+      max-width: 880px;
+      margin: 0 auto;
+      padding: 80px 24px;
+      opacity: 0;
+      transform: translateY(20px);
+      transition: all 0.8s ease;
+    }
+    .container.visible {
+      opacity: 1;
+      transform: translateY(0);
+    }
+    h1, h2 {
+      line-height: 1.2;
+    }
+    h1 {
+      font-size: 2.6rem;
+      margin-bottom: 12px;
+    }
+    h2 {
+      font-size: 1.6rem;
+      margin-top: 64px;
+      margin-bottom: 16px;
+    }
+    p {
+      max-width: 680px;
+      color: var(--muted);
+    }
+    .hero p {
+      font-size: 1.1rem;
+    }
+    .badge {
+      margin-top: 12px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    .cta {
+      margin-top: 32px;
+      display: flex;
+      gap: 16px;
+      flex-wrap: wrap;
+    }
+    .btn {
+      text-decoration: none;
+      padding: 12px 20px;
+      border-radius: 6px;
+      font-weight: 500;
+      transition: all 0.3s ease;
+    }
+    .btn.primary {
+      background: var(--accent);
+      color: white;
+    }
+    .btn.primary:hover {
+      background: #115e52;
+    }
+    .btn.secondary {
+      border: 1px solid #cbd5e1;
+      color: var(--text);
+    }
+    .btn.secondary:hover {
+      background: #f1f5f9;
+    }
+    ul {
+      padding-left: 18px;
+      color: var(--muted);
+    }
+    footer {
+      margin-top: 80px;
+      font-size: 0.9rem;
+      color: var(--muted);
+    }
+    hr {
+      border: none;
+      border-top: 1px solid #e2e8f0;
+      margin: 64px 0;
+    }
+    /* Sticky top-right CTA */
+    .sticky-cta {
+      position: fixed;
+      top: 24px;
+      right: 24px;
+      z-index: 999;
+    }
+  </style>
+</head>
+<body>
+
+  <a href="https://www.linkedin.com/in/emmanuelndemele" target="_blank" class="btn primary sticky-cta">Connect</a>
+
+  <div class="container hero">
+    <h1>Emmanuel Ndemele</h1>
+    <p><strong>Telehealth & Health Tech Product Manager</strong></p>
+    <p>I build digital health products that bring care to where patients actually are.</p>
+    <div class="badge">
+      MBChB • Telehealth platforms • AI-enabled care • Clinical workflows
+    </div>
+    <div class="cta">
+      <a href="#experience" class="btn primary">View Experience</a>
+      <a href="https://www.linkedin.com/in/emmanuelndemele" target="_blank" class="btn secondary">Connect on LinkedIn</a>
+    </div>
+  </div>
+
+  <div class="container" id="about">
+    <h2>About</h2>
+    <p>I’m a health tech product manager with clinical training who builds and ships digital health products, not just roadmaps and documentation.</p>
+    <p>I built CELMED as a personal project — an AI-powered clinical assistant for telemedicine — taking it from problem discovery to MVP with a strong focus on clinician workflows and adoption.</p>
+    <p>My work sits at the intersection of product strategy, clinical insight, and execution, with a particular interest in telehealth platforms, AI-enabled care, and tools that expand access to quality healthcare.</p>
+  </div>
+
+  <div class="container" id="areas">
+    <h2>Areas of Interest</h2>
+    <ul>
+      <li>Telehealth platforms and virtual care delivery</li>
+      <li>AI-enabled clinical assistants and decision support</li>
+      <li>Remote patient monitoring and distributed care models</li>
+      <li>Digital tools for clinician workflow efficiency</li>
+      <li>Health technology for underserved and resource-constrained systems</li>
+    </ul>
+  </div>
+
+  <div class="container" id="experience">
+    <h2>Selected Work</h2>
+    <p><strong>CELMED — Personal Project</strong><br>
+    AI-powered clinical assistant for telemedicine</p>
+    <ul>
+      <li>Identified workflow gaps in remote clinical care</li>
+      <li>Designed product scope and MVP requirements</li>
+      <li>Integrated AI to support clinical decision-making</li>
+      <li>Built with a focus on usability and clinician adoption</li>
+    </ul>
+    <p><em>End-to-end ownership from concept to MVP.</em></p>
+  </div>
+
+  <div class="container" id="thinking">
+    <h2>How I Think</h2>
+    <ul>
+      <li>Product &gt; features</li>
+      <li>Systems &gt; slogans</li>
+      <li>Adoption &gt; demos</li>
+      <li>Reality &gt; hype</li>
+    </ul>
+  </div>
+
+  <div class="container" id="contact">
+    <h2>Contact</h2>
+    <p><strong>Email:</strong> <a href="mailto:Ndenuel@gmail.com">Ndenuel@gmail.com</a></p>
+    <p><strong>LinkedIn:</strong> <a href="https://www.linkedin.com/in/emmanuelndemele" target="_blank">linkedin.com/in/emmanuelndemele</a></p>
+    <p>Open to telehealth product roles and collaborations.</p>
+  </div>
+
+  <footer class="container">
+    &copy; 2026 Emmanuel Ndemele
+  </footer>
+
+  <script>
+    // Fade-in animation for sections
+    const sections = document.querySelectorAll('.container');
+    const observer = new IntersectionObserver(entries => {
+      entries.forEach(entry => {
+        if(entry.isIntersecting) {
+          entry.target.classList.add('visible');
+          observer.unobserve(entry.target);
+        }
+      });
+    }, { threshold: 0.1 });
+    sections.forEach(section => observer.observe(section));
+  </script>
+
+</body>
+</html>
